@@ -1,18 +1,18 @@
 <h1 align="center">
-    <img alt="Be The Hero" title="#delicinha" src=".github/logo.png" width="250px" />
+    <img title="#delicinha" src="logo.svg" />
 </h1>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/raphabarreto/semana-omnistack-11">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/raphabarreto/semana-omnistack-11">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/GabrielBarcelos1/BeTheHero">
   
   <a href="https://github.com/raphabarreto/semana-omnistack-11/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/raphabarreto/semana-omnistack-11">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/GabrielBarcelos1/BeTheHero">
   </a>
 
   <a href="https://github.com/raphabarreto/semana-omnistack-11/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/raphabarreto/semana-omnistack-11">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/GabrielBarcelos1/BeTheHero">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
