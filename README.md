@@ -3,15 +3,15 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/raphabarreto/semana-omnistack-11">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/GabrielBarcelos1/BeTheHero">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/GabrielBarcelos1/BeTheHero">
   
-  <a href="https://github.com/raphabarreto/semana-omnistack-11/commits/master">
+  <a href="https://github.com/GabrielBarcelos1/BeTheHero/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/GabrielBarcelos1/BeTheHero">
   </a>
 
-  <a href="https://github.com/raphabarreto/semana-omnistack-11/issues">
+  <a href="https://github.com/GabrielBarcelos1/BeTheHero/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/GabrielBarcelos1/BeTheHero">
   </a>
 
@@ -48,22 +48,22 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Celebrate](https://github.com/arb/celebrate)
 
 ## 💻 Projeto
-Projeto desenvolvido durante a <strong>Semana OmniStack</strong> que tem como objetivo conectar pessoas com vontade de ajudar que muitas vezes não tem tempo mas podem ajudar de uma forma monetária à ONGs.
-
+O Projeto <strong>Bhe The Hero</strong> tem como objetivo conectar pessoas com vontade de ajudar com as ONGS/pessoa que tenham vontade de ser ajudados, para receber a ajuda é nescessario um cadastro nominal e tambem fazer o cadastro de caso na aplicação web para ajudar é nescessario baixar a versao mobile vendo assim os casos de todas a ongs e ajudando essas ONGS/pessoas de forma monetaria.
 ## 🔨 Backend
 <h1 align="center">
-<a href="https://insomnia.rest/run/?label=Be%20The%20Hero&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fraphabarreto%2Fbe-the-hero%2Fmaster%2Fbackend%2FBeTheHero.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+<a href="https://insomnia.rest/run/?label=BeTheHero&uri=https%3A%2F%2Fgithub.com%2FGabrielBarcelos1%2FBeTheHero%2Fblob%2Fmaster%2FInsomnia-All_2020-03-28.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </h1>
 
 ## 🌐 Frontend
 <h1 align="center">
-    <img  src="logo.svg" />
+    <img  src="https://github.com/GabrielBarcelos1/BeTheHero/blob/master/Bethehero.gif" />
 </h1>
 
 ## 📱 Mobile
 <h1 align="center">
-    <img alt="Be The Hero" title="#delicinha" src=".github/mobile.gif" />
+    <img src="https://github.com/GabrielBarcelos1/BeTheHero/blob/master/BeTheHeroMobile.gif" />
 </h1>
+<a href="https://github.com/GabrielBarcelos1/BeTheHero/blob/master/BeTheHeroMobile.gif"><a/>
 
 
 ## 🤔 Como contribuir
@@ -82,4 +82,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com 💗 by Raphael Barreto
+Feito com 💗 by Gabriel Vieira Barcelos
