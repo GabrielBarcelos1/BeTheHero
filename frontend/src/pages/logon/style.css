@@ -24,6 +24,9 @@
 .logon-container section.form form div.hidden{
     visibility: hidden;
 }
+.logon-container section.form form input{
+    margin-bottom: 6px;
+}
 .logon-container section.form form input.error{
     border-color: #e02041 ;
 }

@@ -9,7 +9,8 @@ const routes = express.Router()
 
 routes.post('/sessions',celebrate({
     [Segments.BODY]:Joi.object().keys({
-        id: Joi.required()
+        id: Joi.required(),
+        password: Joi.required()
     })
 }),SessionController.create)
 

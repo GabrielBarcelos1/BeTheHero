@@ -7,6 +7,7 @@ import heroesImg from '../../assets/heroes.png'
 import logoImg from '../../assets/logo.svg'
 export default function Logon() {
     const [id, setId] = useState('')
+    const [password,setPasword] = useState('')
     const [classError,setClassError] = useState('hidden')
     const history = useHistory()
     
@@ -15,7 +16,7 @@ export default function Logon() {
         e.preventDefault()
 
         try{
-            const response = await api.post('sessions',{ id })
+            const response = await api.post('sessions',{ id ,password })
 
             localStorage.setItem('ongId', id)
             localStorage.setItem('ongName', response.data.name)
@@ -35,9 +36,16 @@ export default function Logon() {
                     <h1>Faça seu logon</h1>
                     <input
                     className={classError}
-                     placeholder="Seu ID"
+                     placeholder="Digite seu ID"
                      value={id}
                      onChange={e => setId(e.target.value)}
+                      />
+                      <input
+                    className={classError}
+                    type='password'
+                     placeholder="Digite sua senha"
+                     value={password}
+                     onChange={e => setPasword(e.target.value)}
                       />
                       <div className={classError} >Login Inválido, tente novamente</div>
                     <button type="submit" className="button">Entrar</button>

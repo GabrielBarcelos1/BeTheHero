@@ -1,5 +1,6 @@
 const connection = require('../database/connection')
 const generateUniqueId = require('../utils/generateUniqid')
+const generateUniquePassword= require('../utilS/generateUniquePassword')
 
 module.exports = {
 
@@ -12,8 +13,10 @@ module.exports = {
     async create(request, response){
         const {name,email,whatsapp,city,uf} = request.body
     const id = generateUniqueId()
+    const password = generateUniquePassword()
     await connection('ongs').insert({
         id,
+        password,
         name,
         email,
         whatsapp,
@@ -22,6 +25,6 @@ module.exports = {
     })
     
 
-    return response.json({ id })
+    return response.json({ id,password })
     }
 }
