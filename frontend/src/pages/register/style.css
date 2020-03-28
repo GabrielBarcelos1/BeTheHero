@@ -48,3 +48,9 @@ display: flex;
 .register-container .content form .input-group input + input{
         margin-left: 8px;
     }
+.register-container .content form input.error{
+    
+    border-color: #e02041;
+}.register-container .content form input.error::placeholder{
+    color:  #e02041;
+}

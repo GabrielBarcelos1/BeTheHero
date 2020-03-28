@@ -12,6 +12,12 @@ export default function Register() {
     const [whatsapp, setWhatsapp] = useState('')
     const [city, setCity] = useState('')
     const [uf, setUf] = useState('')
+    const [nameError,setNameError] = useState('clean')
+    const [emailError,setEmailError] = useState('clean')
+    const [whatsappError,setWhatsappError] = useState('clean')
+    const [cityError,setCityError] = useState('clean')
+    const [ufError,setUfError] = useState('clean')
+
     const history = useHistory()
 
     async function handleRegister(e) {
@@ -29,7 +35,21 @@ export default function Register() {
         alert(`Seu id de acesso ${response.data.id}`)
         history.push('/')
         }catch{
-            alert('Erro no cadastro, tente novamente')
+            if(name==''){
+            setNameError('error')
+            }
+            if(email==''){
+            setEmailError('error')
+            }
+            if(whatsapp=='' || whatsapp.length<11){
+            setWhatsappError('error')
+            }
+            if(city==''){
+            setCityError('error')
+            }
+            if(uf==''||uf.length!=2 ){
+            setUfError('error')
+            }
         }
         
     }
@@ -49,28 +69,33 @@ export default function Register() {
                 </section>
                 <form onSubmit={handleRegister}>
                     <input
+                        className={nameError}
                         placeholder="Nome da ONG"
                         value={name}
                         onChange={e => setName(e.target.value)}
                     />
                     <input
+                    className={emailError}
                         type="email"
                         placeholder="E-mail"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
                     <input
+                    className={whatsappError}
                         placeholder="Whatsapp"
                         value={whatsapp}
                         onChange={e => setWhatsapp(e.target.value)}
                     />
                     <div className="input-group">
                         <input
+                        className={cityError}
                             placeholder="Cidade"
                             value={city}
                             onChange={e => setCity(e.target.value)}
                         />
                         <input
+                        className={ufError}
                             placeholder="UF"
                             style={{ width: 80 }}
                             value={uf}

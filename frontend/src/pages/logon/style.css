@@ -21,5 +21,20 @@
     font-size: 32px;
     margin-bottom: 32px;
 }
+.logon-container section.form form div.hidden{
+    visibility: hidden;
+}
+.logon-container section.form form input.error{
+    border-color: #e02041 ;
+}
+.logon-container section.form form input.error::placeholder{
+color: #e02041 ;
+}
+.logon-container section.form form div.error{
+visibility: visible;
+color: #e02041 ;
+margin-top: 3px;
+margin-left: 5px   ;
+}
 
 

@@ -11,6 +11,9 @@ export default function Register(){
     const [title,setTitle] = useState()
     const [description,setDescription] = useState()
     const [value, setValue] = useState()
+    const [titleError, setTitleError] = useState('clean')
+    const [descriptionError, setDescriptionError] = useState('clean')
+    const [valueError, setValueError] = useState('clean')
     const ongId = localStorage.getItem('ongId')
     const history = useHistory()
 
@@ -30,7 +33,16 @@ export default function Register(){
           })
           history.push('/profile')
         }catch(err){
-            alert('Erro ao castrar caso tente novamente')
+            if(title == undefined){
+            setTitleError('error')
+            }
+            if(description == undefined){
+                setDescriptionError('error')
+                }
+                if(value == undefined ||  isNaN(parseInt(value))){
+                    setValueError('error')
+                    }
+            
         }
 
     }
@@ -50,16 +62,19 @@ export default function Register(){
                 </section>
                 <form onSubmit={handleNewIncidente}>
                     <input 
+                    className={titleError}
                     placeholder="Titulo do caso"
                     value={title}
                     onChange={e=> setTitle(e.target.value)}
                     />
                     <textarea
+                     className={descriptionError}
                      placeholder="Decrição"
                      value={description}
                      onChange={e=> setDescription(e.target.value)}
                      />
                     <input
+                    className={valueError}
                      placeholder="Valor em reais"
                      value={value}
                     onChange={e=> setValue(e.target.value)}

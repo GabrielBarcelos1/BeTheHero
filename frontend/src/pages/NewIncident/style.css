@@ -45,3 +45,17 @@ line-height: 32px;
         .new-incident-container .content form input{
     margin-top: 8px;
 }
+
+.new-incident-container form input.error{
+    border-color: #e02041;
+}
+.new-incident-container form textarea.error{
+    border-color: #e02041;
+}
+.new-incident-container form input.error::placeholder{
+    color: #e02041;
+}
+.new-incident-container form textarea.error::placeholder{
+    color: #e02041;
+}
+

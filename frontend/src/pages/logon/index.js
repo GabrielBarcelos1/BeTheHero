@@ -7,7 +7,9 @@ import heroesImg from '../../assets/heroes.png'
 import logoImg from '../../assets/logo.svg'
 export default function Logon() {
     const [id, setId] = useState('')
+    const [classError,setClassError] = useState('hidden')
     const history = useHistory()
+    
 
     async function handleLogin(e){
         e.preventDefault()
@@ -19,7 +21,7 @@ export default function Logon() {
             localStorage.setItem('ongName', response.data.name)
             history.push('/profile')
         }catch(err){
-           alert("falha no login, tente novamente") 
+            setClassError('error')
         }
 
     }
@@ -32,10 +34,12 @@ export default function Logon() {
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
                     <input
-                     placeholder="Sua ID"
+                    className={classError}
+                     placeholder="Seu ID"
                      value={id}
                      onChange={e => setId(e.target.value)}
                       />
+                      <div className={classError} >Login Inválido, tente novamente</div>
                     <button type="submit" className="button">Entrar</button>
                 <Link className="back-link"to="/register">
                     <FiLogIn size={16} color="#e02041"/>
@@ -44,6 +48,7 @@ export default function Logon() {
                 </form>
             </section>
             <img src={heroesImg} alt="Heroes" />
+
         </div>
     )
 }
