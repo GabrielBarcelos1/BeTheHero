@@ -1,4 +1,3 @@
-=======
 <h1 align="center">
     <img title="#delicinha" src="logo.svg" />
 </h1>
