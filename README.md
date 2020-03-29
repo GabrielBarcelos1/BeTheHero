@@ -70,8 +70,8 @@ O Projeto Be The Hero tem como objetivo conectar pessoas com vontade de ajudar c
 
 #### Clonando o projeto
 ```sh
-git clone https://github.com/apsampaio/semana-omnistack-11.git
-cd semana-omnistack-11
+git clone https://github.com/GabrielBarcelos1/BeTheHero.git
+cd BeTheHero
 npm install
 ```
 #### Iniciando Backend
