@@ -49,7 +49,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Celebrate](https://github.com/arb/celebrate)
 
 ## 💻 Projeto
-O Projeto <strong>Bhe The Hero</strong> tem como objetivo conectar pessoas com vontade de ajudar com as ONGS/pessoa que tenham vontade de ser ajudados, para receber a ajuda é nescessario um cadastro nominal e tambem fazer o cadastro de caso na aplicação web para ajudar é nescessario baixar a versao mobile vendo assim os casos de todas a ongs e ajudando essas ONGS/pessoas de forma monetaria.
+O Projeto Be The Hero tem como objetivo conectar pessoas com vontade de ajudar com as ONGS/pessoa que tenham vontade de ser ajudados, para receber a ajuda é necessário um cadastro nominal e também fazer o cadastro de caso na aplicação web para ajudar é necessário baixar a versão mobile vendo assim os casos de todas a ongs e ajudando essas ONGS/pessoas de forma monetária.
 ## 🔨 Backend
 <h1 align="center">
 <a href="https://insomnia.rest/run/?label=BeTheHero&uri=https%3A%2F%2Fgithub.com%2FGabrielBarcelos1%2FBeTheHero%2Fblob%2Fmaster%2FInsomnia-All_2020-03-28.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
