@@ -107,6 +107,5 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com 💗 by Gabriel Vieira Barcelos
->>>>>>> 11f1da146d59ffe957cace858ca40b5b8e6f147f
+<p align="center">Feito com 💗 by Gabriel Vieira Barcelos</p>
 
