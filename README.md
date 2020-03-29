@@ -64,6 +64,7 @@ O Projeto <strong>Bhe The Hero</strong> tem como objetivo conectar pessoas com v
     <img src="https://github.com/GabrielBarcelos1/BeTheHero/blob/master/BeTheHeroMobile.gif" />
 </h1>
 <a href="https://github.com/GabrielBarcelos1/BeTheHero/blob/master/BeTheHeroMobile.gif"><a/>
+    
 ## 🔖 Como Executar
 
 #### Clonando o projeto
