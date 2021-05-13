@@ -11,20 +11,33 @@ module.exports = {
     },
 
     async create(request, response){
-        const {name,email,whatsapp,city,uf} = request.body
+        const {name,email,password,cpf,cep,city,district,street,number,whatsapp} = request.body
     const id = generateUniqueId()
-    const password = generateUniquePassword()
     await connection('ongs').insert({
         id,
         password,
         name,
         email,
-        whatsapp,
+        cpf,
+        cep,
         city,
-        uf,
+        district,
+        street,
+        number,
+        whatsapp,
     })
     
 
-    return response.json({ id,password })
+    return response.json({ id,
+        password,
+        name,
+        email,
+        cpf,
+        cep,
+        city,
+        district,
+        street,
+        number,
+        whatsapp, })
     }
 }

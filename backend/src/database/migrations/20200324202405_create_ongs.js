@@ -5,9 +5,13 @@ exports.up = function(knex) {
     table.string('password').notNullable()
     table.string('name').notNullable();
     table.string('email').notNullable();
-    table.string('whatsapp').notNullable();
+    table.string('cpf').notNullable();
+    table.string('cep').notNullable();
     table.string('city').notNullable();
-    table.string('uf', 2).notNullable();
+    table.string('district').notNullable();
+    table.string('street').notNullable();
+    table.string('number').notNullable();
+    table.string('whatsapp').notNullable();
  })
 };
 

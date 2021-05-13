@@ -1,20 +1,17 @@
 const connection = require('../database/connection')
 module.exports = {
     async create(request, response){
-        const { id } = request.body
+        const { email } = request.body
         const { password } = request.body 
 
         const ong = await connection('ongs')
-        .where('id', id)
-        .select('name')
+        .where('email', email)
+        .select('name','id', 'password')
         .first()
-        const ong2 = await connection('ongs')
-        .where('password', password)
-        .select('name')
-        .first()
-        if(!ong || !ong2){
+       console.log(`ong`, ong)
+        if(!ong || ong.password !== password){
             return response.status(400).json({error: 'no ONG found with this ID or Password'})
         }
-        return response.json(ong,)
+        return response.json(ong)
     }
 }

@@ -9,7 +9,7 @@ const routes = express.Router()
 
 routes.post('/sessions',celebrate({
     [Segments.BODY]:Joi.object().keys({
-        id: Joi.required(),
+        email: Joi.required(),
         password: Joi.required()
     })
 }),SessionController.create)
@@ -18,13 +18,18 @@ routes.post('/sessions',celebrate({
 routes.get('/ongs',OngController.index)
 
 
-routes.post('/ongs', celebrate({
+routes.post('/citizen', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
         email: Joi.string().required().email(),
-        whatsapp: Joi.string().required().min(10).max(11),
+        password: Joi.string().required(),
+        cpf: Joi.string().required(),
+        cep: Joi.string().required(),
         city: Joi.string().required(),
-        uf: Joi.string().required().length(2)
+        district: Joi.string().required(),
+        street: Joi.string().required(),
+        number: Joi.string().required(),
+        whatsapp: Joi.string().required().min(10).max(11),
     })
 }) , OngController.create)
 
