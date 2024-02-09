@@ -10,11 +10,13 @@ export default function Register() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [whatsapp, setWhatsapp] = useState('')
+    const [password, setPassword] = useState('')
     const [city, setCity] = useState('')
     const [uf, setUf] = useState('')
     const [nameError,setNameError] = useState('clean')
     const [emailError,setEmailError] = useState('clean')
     const [whatsappError,setWhatsappError] = useState('clean')
+    const [passwordError,setPasswordError] = useState('clean')
     const [cityError,setCityError] = useState('clean')
     const [ufError,setUfError] = useState('clean')
 
@@ -27,6 +29,7 @@ export default function Register() {
             name,
             email,
             whatsapp,
+            password,
             city,
             uf
         }
@@ -40,6 +43,9 @@ export default function Register() {
             if(email==''){
             setEmailError('error')
             }
+            if(password==''){
+                setPasswordError('error')
+                }
             if(whatsapp=='' || whatsapp.length<11){
             setWhatsappError('error')
             }
@@ -63,7 +69,7 @@ export default function Register() {
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#e02041" />
-                    Não tenho cadastro
+                    Já tenho cadastro
                     </Link>
                 </section>
                 <form onSubmit={handleRegister}>
@@ -101,6 +107,14 @@ export default function Register() {
                             onChange={e => setUf(e.target.value)}
                         />
                     </div>
+
+                    <input
+                    className={passwordError}
+                        placeholder="Password"
+                        value={password}
+                        type="password"
+                        onChange={e => setPassword(e.target.value)}
+                    />
 
                     <button className="button" type="submit">Cadastrar</button>
                 </form>

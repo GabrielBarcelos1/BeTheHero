@@ -6,7 +6,7 @@ import api from '../../services/api'
 import heroesImg from '../../assets/heroes.png'
 import logoImg from '../../assets/logo.svg'
 export default function Logon() {
-    const [id, setId] = useState('')
+    const [email, setEmail] = useState('')
     const [password,setPasword] = useState('')
     const [classError,setClassError] = useState('hidden')
     const history = useHistory()
@@ -16,7 +16,9 @@ export default function Logon() {
         e.preventDefault()
 
         try{
-            const response = await api.post('sessions',{ id ,password })
+            const response = await api.post('sessions',{ email, password })
+
+            const {id} = await api.get(`ong/${email}`)
 
             localStorage.setItem('ongId', id)
             localStorage.setItem('ongName', response.data.name)
@@ -33,12 +35,12 @@ export default function Logon() {
             <section className="form">
                 <img src={logoImg} alt="Heroes" />
                 <form onSubmit={handleLogin}>
-                    <h1>Faça seu logon</h1>
+                    <h1>Faça seu login</h1>
                     <input
                     className={classError}
-                     placeholder="Digite seu ID"
-                     value={id}
-                     onChange={e => setId(e.target.value)}
+                     placeholder="Digite seu email"
+                     value={email}
+                     onChange={e => setEmail(e.target.value)}
                       />
                       <input
                     className={classError}
