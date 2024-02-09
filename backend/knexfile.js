@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: process.env.BASE_URL,
+    connection: "postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii-pooler.us-east-1.aws.neon.tech/verceldb?sslmode=require",
     migrations:{
       directory: './src/database/migrations'
     },
@@ -12,7 +12,7 @@ module.exports = {
   },
   test: {
     client: 'pg',
-    connection: process.env.BASE_URL,
+    connection: "postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii-pooler.us-east-1.aws.neon.tech/verceldb?sslmode=require",
     migrations:{
       directory: './src/database/migrations'
     },
@@ -21,7 +21,7 @@ module.exports = {
 
   staging: {
     client: 'pg',
-    connection: process.env.BASE_URL,
+    connection: "postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii-pooler.us-east-1.aws.neon.tech/verceldb?sslmode=require",
     pool: {
       min: 2,
       max: 10
@@ -34,7 +34,7 @@ module.exports = {
   production: {
     client: 'pg',
     debug: true,
-    connection: process.env.BASE_URL,
+    connection: "postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii-pooler.us-east-1.aws.neon.tech/verceldb?sslmode=require",
     
     pool: {
       min: 2,
