@@ -3,7 +3,7 @@
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'pg',
     connection: process.env.BASE_URL,
     migrations:{
       directory: './src/database/migrations'
@@ -11,7 +11,7 @@ module.exports = {
     useNullAsDefault: true,
   },
   test: {
-    client: 'postgresql',
+    client: 'pg',
     connection: process.env.BASE_URL,
     migrations:{
       directory: './src/database/migrations'
@@ -20,7 +20,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'pg',
     connection: process.env.BASE_URL,
     pool: {
       min: 2,
@@ -32,7 +32,7 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     debug: true,
     connection: process.env.BASE_URL,
     
