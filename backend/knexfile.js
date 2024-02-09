@@ -4,9 +4,7 @@ module.exports = {
 
   development: {
     client: 'postgresql',
-    connection: {
-      filename: './src/database/db.sqlite'
-    },
+    connection: process.env.BASE_URL,
     migrations:{
       directory: './src/database/migrations'
     },
@@ -14,9 +12,7 @@ module.exports = {
   },
   test: {
     client: 'postgresql',
-    connection: {
-      filename: './src/database/teste.sqlite'
-    },
+    connection: process.env.BASE_URL,
     migrations:{
       directory: './src/database/migrations'
     },
@@ -25,11 +21,7 @@ module.exports = {
 
   staging: {
     client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
+    connection: process.env.BASE_URL,
     pool: {
       min: 2,
       max: 10
@@ -40,9 +32,9 @@ module.exports = {
   },
 
   production: {
-    client: 'pg',
+    client: 'postgresql',
     debug: true,
-    connection:"postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+    connection: process.env.BASE_URL,
     
     pool: {
       min: 2,
