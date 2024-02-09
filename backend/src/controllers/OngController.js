@@ -1,6 +1,6 @@
 const connection = require('../database/connection')
 const generateUniqueId = require('../utils/generateUniqid')
-const generateUniquePassword= require('../utilS/generateUniquePassword')
+const generateUniquePassword= require('../utils/generateUniquePassword')
 
 module.exports = {
 
