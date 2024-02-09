@@ -42,7 +42,8 @@ module.exports = {
   production: {
     client: 'pg',
     debug: true,
-    connection:"postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+    connection:"postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+    
     pool: {
       min: 2,
       max: 10
