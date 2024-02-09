@@ -11,9 +11,8 @@ module.exports = {
     },
 
     async create(request, response){
-        const {name,email,whatsapp,city,uf} = request.body
+        const {name,email,whatsapp,city,uf,password} = request.body
     const id = generateUniqueId()
-    const password = generateUniquePassword()
     await connection('ongs').insert({
         id,
         password,
@@ -23,8 +22,14 @@ module.exports = {
         city,
         uf,
     })
-    
+    return response.json({ id })
+    },
 
-    return response.json({ id,password })
-    }
+    async ong (request,response) {
+        const {email} = request.params 
+        const ong = await connection('ongs').select('*').where("email", email)
+        console.log(ong)
+    
+        return response.json(ong)
+    },
 }
