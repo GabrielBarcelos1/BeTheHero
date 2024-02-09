@@ -30,7 +30,13 @@ const routes = require('./routes.js')
 const app = express()
 const {errors} = require('celebrate')
 
-app.use(cors())
+app.use(  
+  cors({
+  origin: '*',
+  methods: '*',
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+}))
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
