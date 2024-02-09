@@ -3,7 +3,7 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
       filename: './src/database/db.sqlite'
     },
@@ -13,7 +13,7 @@ module.exports = {
     useNullAsDefault: true,
   },
   test: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
       filename: './src/database/teste.sqlite'
     },
