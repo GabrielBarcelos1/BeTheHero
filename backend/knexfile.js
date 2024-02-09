@@ -40,19 +40,18 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
+    client: 'pg',
+    debug: true,
+    connection:"postgres://default:ocihm5lPdtr9@ep-quiet-fire-a4kb6aii.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
-    }
+      tableName: 'knex_migrations',
+      directory: './src/database/migrations'  // <-- here
+    },
+    ssl: true
   }
 
 };
