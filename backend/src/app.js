@@ -37,7 +37,6 @@ app.use(function (req, res, next) {
   next();
 });
 app.use(express.json())
-
 app.use(routes)
 app.use(errors())
 app.use(express.static('public'))
